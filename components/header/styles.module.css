@@ -1,0 +1,46 @@
+.container {
+    padding: 27px 0px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 33px;
+    align-items: center;
+}
+
+.navbar a {
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.32px;
+    vertical-align: middle;
+}
+
+.navbar .active {
+    color: #B8860B;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.action a {
+    padding: 9px 24.5px;
+    background-color: #B8860B;
+    border-radius: 100px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.32px;
+    vertical-align: middle;
+}
