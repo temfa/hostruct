@@ -1,0 +1,119 @@
+.container {
+    padding: 52px 0px 255px;
+    margin-bottom: 75px;
+    background-color: #F3F3F3;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 673px;
+}
+
+.header h2 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 42.41px;
+    line-height: 100%;
+    letter-spacing: -0.28px;
+}
+
+.header p {
+    color: #696969;
+    font-weight: 500;
+    font-size: 14.14px;
+    line-height: 150%;
+    letter-spacing: -0.28px;
+}
+
+.wrapper select {
+    width: 200px;
+    appearance: none;
+    background-image: url("../../public/images/caret-down.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    color: #B8860B;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    padding: 20px;
+    border-radius: 100px;
+    border: 1px solid #B8860B;
+    cursor: pointer;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 933px;
+}
+
+.single {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: 1s all ease
+}
+
+.active {
+    background-color: #D79C0D;
+    transition: 1s all ease;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.single .content h3 {
+    color: black;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28.28px;
+    letter-spacing: -0.28px;
+    vertical-align: middle;
+}
+
+.content p {
+    color: white;
+    font-weight: 500;
+    font-size: 15.91px;
+    line-height: 150%;
+    letter-spacing: -0.28px;
+    vertical-align: middle;
+}
+
+.active .content h3 {
+    color: white;
+}
+
+.single .plus {
+    width: 33.58px;
+    height: 33.58px;
+    border-radius: 7px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s all ease
+}
+
+.active .plus {
+    background-color: white;
+    transition: 1s all ease
+}

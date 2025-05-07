@@ -1,0 +1,241 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+    padding-top: 27px;
+}
+
+.accord {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.accord p {
+    color: #667479;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+}
+
+.body {
+    display: flex;
+    gap: 65px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 222px;
+}
+
+.left>h2 {
+    color: #B8860B;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price h2,
+.type h2 {
+    color: #00171F;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+}
+
+.price div {
+    display: flex;
+}
+
+.price div input {
+    border: none;
+    border-bottom: 1px solid #EBEEEF;
+    padding: 10px;
+    color: #9FA3A8;
+    width: 107px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.typeBody {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.typeBody div {
+    display: flex;
+    gap: 10px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top select {
+    width: 150px;
+    appearance: none;
+    background-image: url("../../public/images/caret-down.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    color: #B8860B;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    padding: 20px;
+    border-radius: 100px;
+    border: 1px solid #B8860B;
+    cursor: pointer;
+}
+
+.bottom {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.productContainer {
+    /* background-color: #FFFFFF; */
+    border-radius: 12px;
+    width: 302px;
+    /* padding: 22px 0px 0px 30px; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    margin-bottom: 64px;
+    cursor: pointer;
+}
+
+.image {
+    background-color: #F5F5F5;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 22px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.productBody {
+    display: flex;
+    flex-direction: column;
+    /* gap: 6px; */
+}
+
+.productTop {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background-color: #F5F5F5;
+    border-bottom-right-radius: 18px;
+    padding: 0px 30px;
+}
+
+.productTop h3 {
+    color: black;
+    font-weight: 700;
+    font-size: 21.2px;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+}
+
+.productTop p {
+    color: #696969;
+    font-weight: 500;
+    font-size: 15.38px;
+    line-height: 150%;
+    letter-spacing: -0.24px;
+}
+
+.productBottom {
+    display: flex;
+    justify-content: flex-end;
+    /* gap: 18px; */
+}
+
+.productBottom h3 {
+    color: #B8860B;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    background-color: #F5F5F5;
+    border-bottom-right-radius: 18px;
+    flex: 1;
+    padding-top: 6px;
+    text-align: right;
+    padding-right: 18px;
+    border-bottom-left-radius: 12px;
+}
+
+.productBottom .white {
+    background-color: #F5F5F5;
+}
+
+.productBottom .black {
+    background-color: white;
+    /* border-radius: 12px; */
+    border-top-left-radius: 18px;
+    height: 65px;
+    padding: 8px 6px 6px 8px;
+    /* margin-left: -24px; */
+}
+
+.productBottom .black a {
+    background-color: #B8860B;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productBottom .black a h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    width: 35px;
+}

@@ -108,3 +108,71 @@ element::-webkit-scrollbar {
   text-align: center;
   color: #FFFFFF;
 }
+
+.label-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbd5e2;
+  /* light pink */
+  height: 100vh;
+}
+
+.shipping-label {
+  width: 300px;
+  height: 450px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-family: monospace;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.label-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label-p {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.label-info p {
+  font-size: 10px;
+  margin: 0;
+  text-align: right;
+}
+
+.label-title {
+  font-size: 14px;
+  font-weight: bold;
+  border-top: 1px solid #000;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.tracking {
+  border-top: 1px solid #000;
+  padding-top: 5px;
+  font-size: 10px;
+}
+
+.barcode {
+  background-color: black;
+  height: 40px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.tracking-number {
+  text-align: center;
+  letter-spacing: 2px;
+}

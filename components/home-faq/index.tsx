@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { Layout } from "@/layout";
-import { faqs } from "@/utils/data";
+import { homeFaqs } from "@/utils/data";
 import { PlusSvg } from "@/svgs/plus";
 import Link from "next/link";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
@@ -20,7 +20,7 @@ export const HomeFaq = () => {
           </p>
         </div>
         <div className={styles.right}>
-          {faqs?.map((item, index) => {
+          {homeFaqs?.map((item, index) => {
             return (
               <div
                 key={index}

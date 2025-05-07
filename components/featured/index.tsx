@@ -38,12 +38,12 @@ export const FeaturedProducts = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6 }}>
-            {data?.map((item, index) => {
+            {data?.slice(0, 6)?.map((item, index) => {
               return <SingleProduct key={index} title={item.title} price={item.price} text={item.text} src={item.src} />;
             })}
           </motion.div>
         </AnimatePresence>
-        <Link href="">
+        <Link href={active === "Cakes & Pastries" ? "/cakes" : active === "Wigs & Braids" ? "/wigs" : "/accessories"}>
           View all {active === "Cakes & Pastries" ? "Cakes" : active}
           <SideArrowSmallSvg color="#B8860B" />
         </Link>
