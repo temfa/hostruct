@@ -1,5 +1,9 @@
 .container {
     padding: 27px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: white;
 }
 
 .wrapper {
