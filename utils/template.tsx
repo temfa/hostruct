@@ -13,34 +13,36 @@ interface EmailTemplateProps {
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, phoneNumber, address, total, cartItems, message }) => (
   <div>
-    <h1>New Order</h1>
     <p>Dear Hostruct,</p>
     <p>
-      <strong>${name}</strong> just made a new order with shipping to:
+      <strong>{name}</strong> just made a new order with shipping to:
     </p>
     <p>
-      <strong>${address},</strong>
+      <strong>{address}</strong>
     </p>
     <p>
-      <strong>${phoneNumber}</strong>
+      <strong>{phoneNumber}</strong>
     </p>
     <h2>Order Details:</h2>
     <ul>
-      $
-      {cartItems
-        ?.map(
-          (item) => `
-              <li>
-                <p><strong>Product Name:</strong> ${item.title}</p>
-                <p><strong>Quantity:</strong> ${item.count}</p>
-                <p><strong>Amount:</strong> ${formatter(item.price)}</p>
-              </li>
-            `
-        )
-        .join("")}
+      {cartItems?.map((item, index) => (
+        <li key={index}>
+          <p>
+            <strong>Product Name:</strong> {item.title}
+          </p>
+          <p>
+            <strong>Quantity:</strong> {item.count}
+          </p>
+          <p>
+            <strong>Amount:</strong> {formatter(item.price)}
+          </p>
+        </li>
+      ))}
     </ul>
-    <h3>Total Amount Paid: ${formatter(total)}</h3>
-    The user also has this message <strong>{message}</strong>
+    <h3>Total Amount Paid: {formatter(total)}</h3>
+    <p>
+      The user also has this message: <strong>{message}</strong>
+    </p>
     <p>Thank you for your order!</p>
   </div>
 );

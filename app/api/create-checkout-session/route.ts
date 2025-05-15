@@ -1,3 +1,4 @@
+import { CartType } from "@/utils/data";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
@@ -10,16 +11,16 @@ export async function POST(request: NextRequest) {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
-      line_items: [
-        {
-          price_data: {
-            currency: "gbp", // Change currency if needed
-            product_data: { name: "Cakes" },
-            unit_amount: total * 100 * 0.3, // Convert price to cents
+      line_items: cartItems.map((item: CartType) => ({
+        price_data: {
+          currency: "gbp",
+          product_data: {
+            name: item.title, // or `item.name` depending on your data
           },
-          quantity: 1,
+          unit_amount: Math.round(item.price * 100 * 0.3), // in pence (Stripe expects integer)
         },
-      ],
+        quantity: item.count,
+      })),
       metadata: {
         name,
         address,
