@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { useAppSelector } from "@/redux/store/store";
 import { Layout } from "@/layout";
@@ -11,8 +11,10 @@ export const CheckoutBody = () => {
   const cartItems = useAppSelector((store) => store.cart);
   const userDetails = useAppSelector((store) => store.userDetails);
   const total = cartItems?.reduce((a, b) => a + b.price * b.count, 0);
+  const [loading, setLoading] = useState(false);
 
   const submit = async () => {
+    setLoading(true);
     const payload = {
       name: userDetails.fullName,
       address: userDetails.address,
@@ -35,6 +37,7 @@ export const CheckoutBody = () => {
       console.error("Error:", error);
     } finally {
       //   toast.success("Paid Successfully");
+      setLoading(false);
     }
   };
 
@@ -110,7 +113,7 @@ export const CheckoutBody = () => {
               <h2>{formatter(total + 5)}</h2>
             </div>
             <p>By placing this order, you are agreeing to  Terms and Conditions.</p>
-            <button onClick={submit}>Place Order</button>
+            <button onClick={submit}>{loading ? "Loading ...." : "Place Order"} </button>
           </div>
         </div>
       </Layout>
