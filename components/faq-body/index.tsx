@@ -12,11 +12,12 @@ type Props = {
 
 export const FaqBody = () => {
   const [active, setActive] = useState(-22);
-  const [selected, setSelected] = useState("Cakes");
+  const header = ["Cakes & Pastries", "Wigs & Braids", "Accessories"];
+  const [selected, setSelected] = useState("Cakes & Pastries");
   const [data, setData] = useState<Props[]>([]);
 
   useEffect(() => {
-    setData(selected === "Cakes" ? faqs?.cake : selected === "Wigs" ? faqs?.wig : faqs?.access);
+    setData(selected === "Cakes & Pastries" ? faqs?.cake : selected === "Wigs & Braids" ? faqs?.wig : faqs?.access);
   }, [selected]);
   return (
     <div className={styles.container}>
@@ -29,11 +30,15 @@ export const FaqBody = () => {
               services
             </p>
           </div>
-          <select onChange={(e) => setSelected(e.target.value)}>
-            <option value="Cakes">Cake and Pastries</option>
-            <option value="Wigs">Wigs & Braids</option>
-            <option value="Access">Accessories</option>
-          </select>
+          <div className={styles.middle}>
+            {header?.map((item, index) => {
+              return (
+                <p key={index} className={item === selected ? styles.active : ""} onClick={() => setSelected(item)}>
+                  {item}
+                </p>
+              );
+            })}
+          </div>
           <div className={styles.body}>
             {data?.map((item, index) => {
               return (

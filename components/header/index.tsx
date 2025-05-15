@@ -5,11 +5,14 @@ import { Layout } from "@/layout";
 import Image from "next/image";
 import { navbarLinks } from "@/utils/data";
 import Link from "next/link";
-import { SearchSvg } from "@/svgs/search";
 import { usePathname } from "next/navigation";
+import { CartSvg } from "@/svgs/cart";
+import { useAppSelector } from "@/redux/store/store";
 
 export const Header = () => {
   const pathname = usePathname();
+
+  const cartItems = useAppSelector((store) => store.cart);
   return (
     <div className={styles.container}>
       <Layout>
@@ -27,7 +30,15 @@ export const Header = () => {
             })}
           </div>
           <div className={styles.action}>
-            <SearchSvg />
+            <div>
+              <Link href="/cart">
+                <span>
+                  <CartSvg />
+                  <p>{cartItems.length}</p>
+                </span>
+                <p>Cart</p>
+              </Link>
+            </div>
             <Link href="/contact">Contact us</Link>
           </div>
         </div>

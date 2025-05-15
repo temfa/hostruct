@@ -9,11 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@photo-sphere-viewer/compass-plugin": "^5.13.2",
+    "@photo-sphere-viewer/core": "^5.13.2",
+    "@photo-sphere-viewer/markers-plugin": "^5.13.2",
+    "@reduxjs/toolkit": "^2.8.1",
     "add": "^2.0.6",
     "framer-motion": "^12.9.2",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.3",
+    "react-loader-spinner": "^6.1.6",
+    "react-photo-sphere-viewer": "^6.2.3",
+    "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.5",
+    "redux-persist": "^6.0.0",
+    "resend": "^4.5.1",
+    "stripe": "^18.1.0",
     "yarn": "^1.22.22"
   },
   "devDependencies": {

@@ -39,7 +39,7 @@ export const FeaturedProducts = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6 }}>
             {data?.slice(0, 6)?.map((item, index) => {
-              return <SingleProduct key={index} title={item.title} price={item.price} text={item.text} src={item.src} />;
+              return <SingleProduct type={item.type} key={index} title={item.title} price={item.price} text={item.text} src={item.src} id={item.id} />;
             })}
           </motion.div>
         </AnimatePresence>

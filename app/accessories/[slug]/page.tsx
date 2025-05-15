@@ -6,16 +6,8 @@ const ProductDetails = async ({ params }: { params: Promise<{ slug: string }> })
   const { slug } = await params;
   return (
     <>
-      <Details
-        src="/images/access1.png"
-        name={decodeURI(slug)}
-        type="Accessories"
-        price={27}
-        details="Our three-layer 8-inch gold flare cake is a nice cake for a
-special birthday celebration. It has a unique white body
-and gold streaks on it."
-      />
-      <RelatedProducts page="Accessories" />
+      <Details id={decodeURI(slug)} type="Accessories" />
+      <RelatedProducts page="Accessories" id={decodeURI(slug)} />
     </>
   );
 };

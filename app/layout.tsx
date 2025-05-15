@@ -3,6 +3,8 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Providers } from "@/redux/provider";
+import { ToastContainer } from "react-toastify";
 
 const plus = Plus_Jakarta_Sans({
   variable: "--font-plus",
@@ -27,9 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${plus.variable} ${inter.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+        <ToastContainer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

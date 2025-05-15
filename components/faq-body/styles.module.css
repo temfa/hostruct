@@ -51,6 +51,33 @@
     cursor: pointer;
 }
 
+.middle {
+    display: flex;
+    gap: 36px;
+}
+
+.middle p {
+    border: 1px solid #696969;
+    padding: 12px 32px;
+    border-radius: 100px;
+    background-color: transparent;
+    color: #696969;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.middle .active {
+    background: linear-gradient(109.75deg, #B8860B 0%, #8B6914 100%);
+    box-shadow: -3px -3px 6px 0px #FFFFFF1A inset;
+    border: none;
+    color: white;
+}
+
 .body {
     display: flex;
     flex-direction: column;

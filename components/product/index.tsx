@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, useRef, useState } from "react";
 import styles from "./styles.module.css";
 import { Layout } from "../../layout";
 import { CaretRightSvg } from "@/svgs/caret-right";
@@ -9,6 +9,11 @@ import { formatter } from "@/utils/helper";
 import Link from "next/link";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { usePathname, useRouter } from "next/navigation";
+import { ArrowCircleLeft } from "@/svgs/arrow-circle-left";
+import { ArrowCircleRight } from "@/svgs/arrow-circle-right";
+import { useDispatch } from "react-redux";
+import { addtoCart } from "@/redux/slice/cart";
+import { toast } from "react-toastify";
 
 type Props = {
   page: string;
@@ -18,10 +23,39 @@ type Props = {
 
 export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
   const pathname = usePathname();
+  const dispatch = useDispatch();
   const router = useRouter();
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const itemsPerPage = 12;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+
+  const paginatedItems = products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+      targetRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const addToCart = (item: ProductProps) => {
+    const payload = {
+      src: item.src,
+      title: item.title,
+      text: item.text,
+      price: item.price,
+      type: item.type,
+      id: item.id,
+      count: 1,
+    };
+    dispatch(addtoCart(payload));
+    toast.success("Added to Cart Successfully!!");
+  };
+
   return (
     <Layout>
-      <div className={styles.container}>
+      <div className={styles.container} ref={targetRef}>
         <div className={styles.accord}>
           <p>Home</p>
           <CaretRightSvg />
@@ -60,26 +94,29 @@ export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
               </select>
             </div>
             <div className={styles.bottom}>
-              {products?.map((item, index) => {
+              {paginatedItems?.map((item, index) => {
                 return (
-                  <div className={styles.productContainer} key={index} onClick={() => router.push(`${pathname}/${item.title}`)}>
-                    <div className={styles.image}>
+                  <div className={styles.productContainer} key={index}>
+                    <div className={styles.image} onClick={() => router.push(`${pathname}/${item.id}`)}>
                       <Image width={250} height={283} alt="Product" src={item.src} />
                     </div>
                     <div className={styles.productBody}>
-                      <div className={styles.productTop}>
+                      <div className={styles.productTop} onClick={() => router.push(`${pathname}/${item.id}`)}>
                         <h3>{item.title}</h3>
                         <p>{item.text}</p>
                       </div>
                       <div className={styles.productBottom}>
-                        <h3>{formatter(item.price)}</h3>
+                        <div className={styles.productLeft}>
+                          <button onClick={() => addToCart(item)}>Add to Cart</button>
+                          <h3>{formatter(item.price)}</h3>
+                        </div>
                         <div className={styles.white}>
                           <div className={styles.black}>
                             <Link href="">
+                              <h2>Buy Now</h2>
                               <span>
-                                <h2>Buy Now</h2>
+                                <SideArrowSmallSvg color="white" />{" "}
                               </span>
-                              <SideArrowSmallSvg color="white" />{" "}
                             </Link>
                           </div>
                         </div>
@@ -88,6 +125,19 @@ export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
                   </div>
                 );
               })}
+              <div className={styles.pagination}>
+                <button className={styles.arrow} onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+                  <ArrowCircleLeft />
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button key={page} onClick={() => handlePageChange(page)} className={page === currentPage ? styles.active : styles.number}>
+                    {page}
+                  </button>
+                ))}
+                <button className={styles.arrow} onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+                  <ArrowCircleRight />
+                </button>
+              </div>
             </div>
           </div>
         </div>
