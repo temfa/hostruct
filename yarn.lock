@@ -479,33 +479,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@photo-sphere-viewer/compass-plugin@npm:^5.13.2":
-  version: 5.13.2
-  resolution: "@photo-sphere-viewer/compass-plugin@npm:5.13.2"
-  peerDependencies:
-    "@photo-sphere-viewer/core": 5.13.2
-  checksum: 657d5889d63529286aab2e9fb4f6610541bb4adf0b4acdd1751f0cf44e278eca481e77032496fc0698078beeb50bee90ef1e97f5009486e4b3c3771b7f64eb56
-  languageName: node
-  linkType: hard
-
-"@photo-sphere-viewer/core@npm:^5.13.2":
-  version: 5.13.2
-  resolution: "@photo-sphere-viewer/core@npm:5.13.2"
-  dependencies:
-    three: ^0.175.0
-  checksum: fdeebce9fdfa654e86630b8b8decf9891752abf37b63b31e4c66d18b7050aeac7bf759d9b3d7c60398d61a07059e6713eed7f2b702278488c87c445c85f6c517
-  languageName: node
-  linkType: hard
-
-"@photo-sphere-viewer/markers-plugin@npm:^5.13.2":
-  version: 5.13.2
-  resolution: "@photo-sphere-viewer/markers-plugin@npm:5.13.2"
-  peerDependencies:
-    "@photo-sphere-viewer/core": 5.13.2
-  checksum: 345b42e125b14c939ff80f438c56b78f26d4da894755227d563fe0ccaafe35d084efbcf25b12a253c0e909a910273bc2ad124d68596cbcb5345de7fce47553ab
-  languageName: node
-  linkType: hard
-
 "@react-email/render@npm:1.0.6":
   version: 1.0.6
   resolution: "@react-email/render@npm:1.0.6"
@@ -1902,13 +1875,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eventemitter3@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "eventemitter3@npm:5.0.1"
-  checksum: 543d6c858ab699303c3c32e0f0f47fc64d360bf73c3daf0ac0b5079710e340d6fe9f15487f94e66c629f5f82cd1a8678d692f3dbb6f6fcd1190e1b97fcad36f8
-  languageName: node
-  linkType: hard
-
 "fast-deep-equal@npm:^2.0.1":
   version: 2.0.1
   resolution: "fast-deep-equal@npm:2.0.1"
@@ -2247,9 +2213,6 @@ __metadata:
   resolution: "hostruct@workspace:."
   dependencies:
     "@eslint/eslintrc": ^3
-    "@photo-sphere-viewer/compass-plugin": ^5.13.2
-    "@photo-sphere-viewer/core": ^5.13.2
-    "@photo-sphere-viewer/markers-plugin": ^5.13.2
     "@reduxjs/toolkit": ^2.8.1
     "@types/node": ^20
     "@types/react": ^19
@@ -2263,7 +2226,6 @@ __metadata:
     react-dom: ^19.0.0
     react-hook-form: ^7.56.3
     react-loader-spinner: ^6.1.6
-    react-photo-sphere-viewer: ^6.2.3
     react-redux: ^9.2.0
     react-toastify: ^11.0.5
     redux-persist: ^6.0.0
@@ -3225,20 +3187,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-photo-sphere-viewer@npm:^6.2.3":
-  version: 6.2.3
-  resolution: "react-photo-sphere-viewer@npm:6.2.3"
-  dependencies:
-    eventemitter3: ^5.0.1
-  peerDependencies:
-    "@photo-sphere-viewer/core": ">=5.13.1"
-    prop-types: ^15.5.4
-    react: ">=16.0.0"
-    react-dom: ">=16.0.0"
-  checksum: 1d6fec7d9ac29e024729d1583f3aade17781042c91a0f7b414117b811754ec304fd5526ecdf8016520690f02eb8cbc8d3d991ccb0edf67ee4b9d28157b10acc4
-  languageName: node
-  linkType: hard
-
 "react-promise-suspense@npm:0.3.4":
   version: 0.3.4
   resolution: "react-promise-suspense@npm:0.3.4"
@@ -3881,13 +3829,6 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
-  languageName: node
-  linkType: hard
-
-"three@npm:^0.175.0":
-  version: 0.175.0
-  resolution: "three@npm:0.175.0"
-  checksum: 9d24395620faae40fa91b83e352766932d70d0fba6589ab875bbaa08f47e6aa3f3b78f279ebfefc4468b6e21a8472c42ce27e0730427b21027c6dfa9c95e0994
   languageName: node
   linkType: hard
 
