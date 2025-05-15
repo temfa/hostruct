@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
         address,
         phoneNumber,
         total,
-        cartItems,
+        cartItems: JSON.stringify(cartItems),
       },
       success_url: `${request.nextUrl.origin}/checkout`,
       cancel_url: `${request.nextUrl.origin}/checkout`,
