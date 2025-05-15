@@ -41,37 +41,41 @@ export const CartBody = () => {
             </div>
             <div className={styles.bottom}>
               <h2>Items Name</h2>
-              {cartItems?.map((item, index) => {
-                return (
-                  <div className={styles.single} key={index}>
-                    <div className={styles.cartLeft}>
-                      <Image src={item.src} width={64} height={64} alt="Product" />
-                      <div>
-                        <h2>{item.title}</h2>
-                        <p>{formatter(item.price)}</p>
-                      </div>
-                    </div>
-                    <div className={styles.cartRight}>
-                      <div className={styles.actions}>
+              {cartItems?.length === 0 ? (
+                <h3>No item ordered yet</h3>
+              ) : (
+                cartItems?.map((item, index) => {
+                  return (
+                    <div className={styles.single} key={index}>
+                      <div className={styles.cartLeft}>
+                        <Image src={item.src} width={64} height={64} alt="Product" />
                         <div>
-                          <span
-                            onClick={() => {
-                              if (item.count !== 1) dispatch(reducetoCart(item));
-                            }}>
-                            <RemoveSvg />
-                          </span>
-                          <p>{item.count}</p>
-                          <span onClick={() => dispatch(addtoCart(item))}>
-                            <AddSvg />
-                          </span>
+                          <h2>{item.title}</h2>
+                          <p>{formatter(item.price)}</p>
                         </div>
-                        <p onClick={() => dispatch(removeFromCart(item))}>Remove</p>
                       </div>
-                      <h2>{formatter(item.price * item.count)}</h2>
+                      <div className={styles.cartRight}>
+                        <div className={styles.actions}>
+                          <div>
+                            <span
+                              onClick={() => {
+                                if (item.count !== 1) dispatch(reducetoCart(item));
+                              }}>
+                              <RemoveSvg />
+                            </span>
+                            <p>{item.count}</p>
+                            <span onClick={() => dispatch(addtoCart(item))}>
+                              <AddSvg />
+                            </span>
+                          </div>
+                          <p onClick={() => dispatch(removeFromCart(item))}>Remove</p>
+                        </div>
+                        <h2>{formatter(item.price * item.count)}</h2>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })
+              )}
             </div>
           </div>
           <div className={styles.right}>

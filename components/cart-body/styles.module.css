@@ -75,6 +75,18 @@
     letter-spacing: -0.1px;
 }
 
+.bottom>h3 {
+    color: #0D0C0D;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    padding: 16px 0px;
+    height: 52px;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .single {
     padding: 16px 0px;
     border-bottom: 1px solid #F8F7F8;
