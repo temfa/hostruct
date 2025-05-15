@@ -5,7 +5,7 @@ const cartSlice = createSlice({
   initialState: <CartType[]>[],
   reducers: {
     addtoCart: (state, { payload }) => {
-      const existingIndex = state.findIndex((item) => item.title === payload.title);
+      const existingIndex = state.findIndex((item) => item.id === payload.id);
       if (existingIndex !== -1) {
         state[existingIndex].count += 1;
       } else {
@@ -13,13 +13,13 @@ const cartSlice = createSlice({
       }
     },
     reducetoCart: (state, { payload }) => {
-      const existingIndex = state.findIndex((item) => item.title === payload.title);
+      const existingIndex = state.findIndex((item) => item.id === payload.id);
       if (existingIndex !== -1) {
         state[existingIndex].count -= 1;
       }
     },
     removeFromCart: (state, { payload }) => {
-      return state.filter((item) => item.title !== payload.title);
+      return state.filter((item) => item.id !== payload.id);
     },
     clearCart: () => {
       return [];
