@@ -6,21 +6,28 @@ import { Layout } from "@/layout";
 import { formatter } from "@/utils/helper";
 import { CardSvg } from "@/svgs/card";
 import Image from "next/image";
+import { CartType } from "@/utils/data";
 
 export const CheckoutBody = () => {
-  const cartItems = useAppSelector((store) => store.cart);
+  const cartItems: CartType[] = useAppSelector((store) => store.cart);
   const userDetails = useAppSelector((store) => store.userDetails);
   const total = cartItems?.reduce((a, b) => a + b.price * b.count, 0);
   const [loading, setLoading] = useState(false);
 
   const submit = async () => {
     setLoading(true);
+    const slimCartItems = cartItems?.map((item) => ({
+      price: item.price,
+      title: item.title,
+      count: item.count,
+    }));
     const payload = {
       name: userDetails.fullName,
       address: userDetails.address,
       phoneNumber: userDetails?.phoneNumber as string,
       total: total,
-      cartItems: cartItems,
+      cartItems: slimCartItems,
+      message: userDetails.message,
     };
 
     try {

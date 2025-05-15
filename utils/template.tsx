@@ -8,9 +8,10 @@ interface EmailTemplateProps {
   phoneNumber: string;
   total: number;
   cartItems: CartType[];
+  message: string;
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, phoneNumber, address, total, cartItems }) => (
+export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, phoneNumber, address, total, cartItems, message }) => (
   <div>
     <h1>New Order</h1>
     <p>Dear Hostruct,</p>
@@ -23,7 +24,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, ph
     <p>
       <strong>${phoneNumber}</strong>
     </p>
-
     <h2>Order Details:</h2>
     <ul>
       $
@@ -34,15 +34,13 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, ph
                 <p><strong>Product Name:</strong> ${item.title}</p>
                 <p><strong>Quantity:</strong> ${item.count}</p>
                 <p><strong>Amount:</strong> ${formatter(item.price)}</p>
-                <p><strong>Size:</strong> ${item.size}</p>
               </li>
             `
         )
         .join("")}
     </ul>
-
     <h3>Total Amount Paid: ${formatter(total)}</h3>
-
+    The user also has this message <strong>{message}</strong>
     <p>Thank you for your order!</p>
   </div>
 );

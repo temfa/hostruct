@@ -45,6 +45,7 @@ export async function POST(req: NextRequest) {
           phoneNumber: metadata?.phoneNumber as string,
           total: amount_total as number,
           cartItems: JSON.parse(metadata?.cartItems || "[]") as CartType[],
+          message: metadata?.message as string,
         }) as React.ReactElement,
       });
 
