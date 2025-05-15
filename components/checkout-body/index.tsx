@@ -6,7 +6,6 @@ import { Layout } from "@/layout";
 import { formatter } from "@/utils/helper";
 import { CardSvg } from "@/svgs/card";
 import Image from "next/image";
-import { toast } from "react-toastify";
 
 export const CheckoutBody = () => {
   const cartItems = useAppSelector((store) => store.cart);
@@ -35,7 +34,7 @@ export const CheckoutBody = () => {
     } catch (error) {
       console.error("Error:", error);
     } finally {
-      toast.success("Paid Successfully");
+      //   toast.success("Paid Successfully");
     }
   };
 

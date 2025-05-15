@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(request: NextRequest) {
   try {
-    const { serviceName, price, name, location, date, message } = await request.json();
+    const { name, address, phoneNumber, total, cartItems } = await request.json();
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -14,18 +14,18 @@ export async function POST(request: NextRequest) {
         {
           price_data: {
             currency: "gbp", // Change currency if needed
-            product_data: { name: serviceName },
-            unit_amount: price * 100 * 0.3, // Convert price to cents
+            product_data: { name: "Cakes" },
+            unit_amount: total * 100 * 0.3, // Convert price to cents
           },
           quantity: 1,
         },
       ],
       metadata: {
         name,
-        serviceName,
-        date,
-        location,
-        message,
+        address,
+        phoneNumber,
+        total,
+        cartItems,
       },
       success_url: `${request.nextUrl.origin}/checkout`,
       cancel_url: `${request.nextUrl.origin}/checkout`,
