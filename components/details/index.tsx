@@ -8,6 +8,9 @@ import { formatter } from "@/utils/helper";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { productData } from "@/utils/data";
 import { ProductProps } from "../single-product";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { addtoCart } from "@/redux/slice/cart";
 
 type Props = {
   id: string;
@@ -15,6 +18,8 @@ type Props = {
 };
 
 const Details: FC<Props> = ({ id, type }) => {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const colors = ["#DD3333", "#F2F2F2", "#1E73BE", "#11B859", "#EF0C80", "#DD4621", "#7A533C", "#800080", "#EEEE22"];
   const [data, setData] = useState<ProductProps>({ src: "", title: "", text: "", price: 0, type: "cakes", id: "" });
   useEffect(() => {
@@ -22,6 +27,20 @@ const Details: FC<Props> = ({ id, type }) => {
     const foundData = find?.find((item) => item.id === id);
     if (foundData) setData(foundData);
   }, [type, id]);
+  const [count, setCount] = useState(1);
+
+  const request = () => {
+    const payload = {
+      src: data.src,
+      title: data.title,
+      description: data?.text,
+      price: data?.price,
+      count,
+      id: data?.id,
+    };
+    dispatch(addtoCart(payload));
+    router.push("/delivery-info");
+  };
   return (
     <Layout>
       <div className={styles.container}>
@@ -77,9 +96,14 @@ const Details: FC<Props> = ({ id, type }) => {
               <div className={styles.quantity}>
                 <p>Quantity:</p>
                 <div>
-                  <p>-</p>
-                  <p>1</p>
-                  <p>+</p>
+                  <p
+                    onClick={() => {
+                      if (count !== 1) setCount(count - 1);
+                    }}>
+                    -
+                  </p>
+                  <p>{count}</p>
+                  <p onClick={() => setCount(count + 1)}>+</p>
                 </div>
               </div>
               <div className={styles.count}>
@@ -94,10 +118,10 @@ const Details: FC<Props> = ({ id, type }) => {
                   </div>
                   <div className={styles.single}>
                     <p>Grand total</p>
-                    <h2>{formatter(data.price)}</h2>
+                    <h2>{formatter(data.price * count)}</h2>
                   </div>
                 </div>
-                <button>
+                <button onClick={request}>
                   Request Now <SideArrowSmallSvg color="white" />
                 </button>
               </div>
