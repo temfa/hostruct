@@ -312,3 +312,59 @@
     vertical-align: bottom;
     cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+    .body {
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .price div input {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .top {
+        justify-content: flex-start;
+    }
+
+    .top select {
+        padding: 17.6px 20px;
+        background-color: white;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .image img {
+        width: 300px;
+    }
+
+    .productContainer {
+        width: 100%;
+        margin-bottom: 44px;
+    }
+
+    .productBottom .productLeft {
+        padding-left: 30px;
+        justify-content: space-between;
+    }
+
+    .productLeft button {
+        width: 92px;
+        font-size: 10.29px;
+    }
+
+    .productBottom h3 {
+        font-size: 20px;
+        line-height: 37.13px;
+    }
+}

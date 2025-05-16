@@ -244,3 +244,23 @@
     letter-spacing: -0.32px;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 56px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        padding: 24px 16px;
+    }
+
+    .deliveryInfo {
+        padding: 24px 11px;
+    }
+}

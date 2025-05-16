@@ -15,6 +15,7 @@ export const Banner = () => {
   return (
     <div className={styles.container}>
       <div
+        className={styles.sideArrow}
         onClick={() => {
           if (active === 0) setActive(2);
           else setActive(active - 1);
@@ -41,6 +42,24 @@ export const Banner = () => {
                 Contact us <SideArrowSmallSvg color="#B8860B" />
               </Link>
             </div>
+            <div className={styles.actionArrow}>
+              <div
+                className={styles.sideArrow}
+                onClick={() => {
+                  if (active === 0) setActive(2);
+                  else setActive(active - 1);
+                }}>
+                <ArrowCircleLeft />
+              </div>
+              <div
+                className={styles.sideArrow}
+                onClick={() => {
+                  if (active === bannerData.length - 1) setActive(0);
+                  else setActive(active + 1);
+                }}>
+                <ArrowCircleRight />
+              </div>
+            </div>
           </motion.div>
         </AnimatePresence>
         <AnimatePresence mode="wait">
@@ -65,6 +84,7 @@ export const Banner = () => {
         </AnimatePresence>
       </div>
       <div
+        className={styles.sideArrow}
         onClick={() => {
           if (active === bannerData.length - 1) setActive(0);
           else setActive(active + 1);

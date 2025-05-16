@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
         total,
         cartItems: JSON.stringify(cartItems),
       },
-      success_url: `${request.nextUrl.origin}/checkout`,
+      success_url: `${request.nextUrl.origin}/success`,
       cancel_url: `${request.nextUrl.origin}/checkout`,
     });
     return NextResponse.json({ url: session.url });

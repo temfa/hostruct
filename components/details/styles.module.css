@@ -264,3 +264,30 @@
     letter-spacing: -0.32px;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding-top: 20px;
+        padding-bottom: 126px;
+        flex-direction: column;
+        gap: 19px;
+    }
+
+    .container>img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .group select {
+        width: 100%;
+    }
+
+    .colors {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}

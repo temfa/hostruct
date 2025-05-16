@@ -111,3 +111,46 @@
     align-items: center;
     gap: 8px;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding-bottom: 143px;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .left {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .left h2 {
+        font-size: 42.41px;
+        width: 100%;
+    }
+
+    .left p {
+        width: 100%;
+        font-size: 14.14px;
+        line-height: 150%;
+    }
+
+    .single {
+        padding: 16px;
+    }
+
+
+    .single .content h3 {
+        font-size: 18px;
+        line-height: 16.15px;
+    }
+
+    .single .content p {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .right a {
+        padding: 10.44px 16px;
+    }
+}

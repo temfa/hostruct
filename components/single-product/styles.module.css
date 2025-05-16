@@ -127,3 +127,28 @@
     vertical-align: middle;
     width: 35px;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        margin-bottom: 44px;
+    }
+
+    .top {
+        padding: 0px 12px;
+    }
+
+    .bottom .left {
+        padding-left: 12px;
+    }
+
+    .left button {
+        width: 92px;
+        font-size: 10.29px;
+    }
+
+    .bottom h3 {
+        font-size: 20px;
+        line-height: 37.13px;
+    }
+}

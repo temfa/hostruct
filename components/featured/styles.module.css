@@ -69,3 +69,34 @@
     letter-spacing: -0.3px;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 30px 16px 65px;
+        gap: 22px;
+    }
+
+    .header {
+        gap: 17.39px;
+    }
+
+    .header>h2 {
+        font-size: 19.56px;
+        line-height: 21.74px;
+    }
+
+    .header div {
+        gap: 4px;
+        align-items: center;
+    }
+
+    .header div p {
+        padding: 10.5px 16.8px;
+        font-size: 9px;
+        line-height: 12.6px;
+    }
+
+    .container>a {
+        padding: 16.75px 27.16px;
+    }
+}

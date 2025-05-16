@@ -144,3 +144,57 @@
     background-color: white;
     transition: 1s all ease
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 76px 0px 155px;
+        background-color: white;
+        margin-bottom: 0px;
+    }
+
+    .wrapper {
+        gap: 54px;
+    }
+
+    .header {
+        width: 100%;
+        gap: 7px;
+    }
+
+    .middle {
+        gap: 9px;
+    }
+
+    .middle p {
+        padding: 14.94px 13.46px;
+        font-size: 10.86px;
+        line-height: 16.29px;
+    }
+
+    .body {
+        width: 100%;
+    }
+
+    .single {
+        background-color: #F5F5F5;
+    }
+
+    .active {
+        background-color: #D79C0D;
+    }
+
+    .single .content h3 {
+        font-size: 18px;
+        line-height: 19px;
+    }
+
+    .content p {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .single .plus {
+        width: 24px;
+        height: 24px;
+    }
+}

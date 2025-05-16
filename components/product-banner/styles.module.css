@@ -1,0 +1,7 @@
+@media screen and (max-width: 500px) {
+
+    .image {
+        object-fit: cover;
+        width: 100%;
+    }
+}

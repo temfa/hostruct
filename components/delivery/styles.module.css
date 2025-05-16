@@ -173,3 +173,21 @@
 .review div img {
     border-radius: 12px;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        margin-bottom: 56px;
+        padding: 10px 0px;
+    }
+
+    .wrapper {
+        padding: 60px 24px;
+        width: 100%;
+        gap: 69px;
+        border-radius: 0px;
+    }
+
+    .form {
+        padding: 44px 21px;
+    }
+}

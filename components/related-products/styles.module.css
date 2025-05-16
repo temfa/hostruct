@@ -149,3 +149,54 @@
     vertical-align: middle;
     width: 35px;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding-bottom: 142px;
+        gap: 16px;
+    }
+
+    .container>h2 {
+        font-size: 32px;
+        line-height: 42.61px;
+    }
+
+    .body {
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+    }
+
+    .productContainer {
+        width: 100%;
+        margin-bottom: 44px;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .image img {
+        width: 300px;
+    }
+
+    .productContainer {
+        width: 100%;
+        margin-bottom: 44px;
+    }
+
+    .productBottom .productLeft {
+        padding-left: 30px;
+        justify-content: space-between;
+    }
+
+    .productLeft button {
+        width: 92px;
+        font-size: 10.29px;
+    }
+
+    .productBottom h3 {
+        font-size: 20px;
+        line-height: 37.13px;
+    }
+}

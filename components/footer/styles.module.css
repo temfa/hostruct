@@ -84,3 +84,32 @@
     display: flex;
     gap: 12px;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        margin-bottom: 35px;
+    }
+
+    .top {
+        padding: 60px 24px 111px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        gap: 40.14px;
+        align-items: flex-start;
+        padding-top: 40.14px;
+        border-top: 1px solid white;
+    }
+
+    .right div {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

@@ -214,3 +214,31 @@
     letter-spacing: -0.29px;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 122px 0px 156px;
+        gap: 39px;
+    }
+
+    .container>h2 {
+        font-size: 33.45px;
+        line-height: 37.17px;
+    }
+
+    .body {
+        flex-direction: column;
+        gap: 28.43px;
+    }
+
+    .first,
+    .second {
+        width: 100%;
+    }
+
+    .content>p,
+    .contents>p {
+        font-size: 12.74px;
+        line-height: 19.1px;
+    }
+}

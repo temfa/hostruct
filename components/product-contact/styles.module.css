@@ -96,3 +96,27 @@
     letter-spacing: -0.32px;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 126px 0px;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .left h2 {
+        font-size: 40px;
+    }
+
+    .left p {
+        font-size: 16px;
+    }
+
+    .right {
+        padding: 37px 16px;
+    }
+}
