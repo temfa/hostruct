@@ -1,7 +1,14 @@
+.mobile {
+    display: none;
+}
+
 @media screen and (max-width: 500px) {
 
     .image {
-        object-fit: cover;
-        width: 100%;
+        display: none;
+    }
+
+    .mobile {
+        display: block;
     }
 }

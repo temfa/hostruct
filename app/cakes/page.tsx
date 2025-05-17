@@ -7,7 +7,7 @@ import React from "react";
 const Cakes = () => {
   return (
     <>
-      <ProductBanner src="/images/cake-page-banner.png" />
+      <ProductBanner src="/images/cake-page-banner.png" mobile="/images/cake-page-mobile.png" />
       <ProductPage
         page="Cakes & Pastries"
         filterData={["Single Layer", "Tiered celebration", "Birthday", "Wedding", "Birthday", "Cupcakes and pastries"]}

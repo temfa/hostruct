@@ -7,7 +7,7 @@ import React from "react";
 const Wigs = () => {
   return (
     <>
-      <ProductBanner src="/images/wig-page-banner.png" />
+      <ProductBanner src="/images/wig-page-banner.png" mobile="/images/wig-page-mobile.png" />
       <ProductPage page="Wigs & Braids" filterData={["Human hair wigs", "Braided wigs", "Braids", "Pre-stretched braids", "Hair care products"]} products={productData.wig} />
       <ProductContact />
     </>
