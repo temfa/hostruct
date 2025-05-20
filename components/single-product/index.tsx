@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { formatter } from "@/utils/helper";
-import Link from "next/link";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
@@ -51,12 +50,16 @@ export const SingleProduct: FC<ProductProps> = ({ src, text, title, price, type,
           </div>
           <div className={styles.white}>
             <div className={styles.black}>
-              <Link href="">
+              <div
+                onClick={() => {
+                  addToCart();
+                  router.push("/cart");
+                }}>
                 {/* <span> */}
                 <h2>Buy Now</h2>
                 {/* </span> */}
                 <SideArrowSmallSvg color="white" />
-              </Link>
+              </div>
             </div>
           </div>
         </div>

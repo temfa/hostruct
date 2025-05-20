@@ -109,7 +109,7 @@
     /* margin-left: -24px; */
 }
 
-.bottom .black a {
+.bottom .black div {
     background-color: #B8860B;
     border-radius: 12px;
     padding: 10px;
@@ -118,7 +118,7 @@
     justify-content: center;
 }
 
-.bottom .black a h2 {
+.bottom .black div h2 {
     color: white;
     font-weight: 700;
     font-size: 14px;

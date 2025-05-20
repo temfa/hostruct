@@ -131,7 +131,7 @@
     /* margin-left: -24px; */
 }
 
-.productBottom .black a {
+.productBottom .black div {
     background-color: #B8860B;
     border-radius: 12px;
     padding: 10px;
@@ -140,7 +140,7 @@
     justify-content: center;
 }
 
-.productBottom .black a h2 {
+.productBottom .black div h2 {
     color: white;
     font-weight: 700;
     font-size: 14px;

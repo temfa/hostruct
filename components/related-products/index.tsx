@@ -6,7 +6,6 @@ import { ProductProps } from "../single-product";
 import { productData } from "@/utils/data";
 import Image from "next/image";
 import { formatter } from "@/utils/helper";
-import Link from "next/link";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { usePathname, useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
@@ -62,12 +61,16 @@ export const RelatedProducts = ({ page, id }: { page: string; id: string }) => {
                       </div>
                       <div className={styles.white}>
                         <div className={styles.black}>
-                          <Link href="">
+                          <div
+                            onClick={() => {
+                              addToCart(item);
+                              router.push("/cart");
+                            }}>
                             <span>
                               <h2>Buy Now</h2>
                             </span>
                             <SideArrowSmallSvg color="white" />{" "}
-                          </Link>
+                          </div>
                         </div>
                       </div>
                     </div>

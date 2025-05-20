@@ -6,7 +6,6 @@ import { CaretRightSvg } from "@/svgs/caret-right";
 import { ProductProps } from "../single-product";
 import Image from "next/image";
 import { formatter } from "@/utils/helper";
-import Link from "next/link";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { usePathname, useRouter } from "next/navigation";
 import { ArrowCircleLeft } from "@/svgs/arrow-circle-left";
@@ -112,12 +111,16 @@ export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
                         </div>
                         <div className={styles.white}>
                           <div className={styles.black}>
-                            <Link href="">
+                            <div
+                              onClick={() => {
+                                addToCart(item);
+                                router.push("/cart");
+                              }}>
                               <h2>Buy Now</h2>
                               <span>
                                 <SideArrowSmallSvg color="white" />{" "}
                               </span>
-                            </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
