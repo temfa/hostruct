@@ -6,23 +6,23 @@ import Image from "next/image";
 import { navbarLinks } from "@/utils/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CartSvg } from "@/svgs/cart";
-import { useAppSelector } from "@/redux/store/store";
+// import { CartSvg } from "@/svgs/cart";
+// import { useAppSelector } from "@/redux/store/store";
 import { BarsSvg } from "@/svgs/bars";
 
 export const Header = () => {
   const pathname = usePathname();
 
-  const cartItems = useAppSelector((store) => store.cart);
+  // const cartItems = useAppSelector((store) => store.cart);
   const [mobile, setMobile] = useState(false);
   return (
     <div className={styles.container}>
       <Layout>
         <div className={mobile ? `${styles.wrapper} ${styles.mobile}` : styles.wrapper}>
           <div className={styles.logo}>
-            <Image src="/images/hostruct.png" width={176} height={25} alt="Logo" />
+            <Image src="/images/hostruct.png" width={131} height={60.77} alt="Logo" />
             <div className={styles.side}>
-              <div>
+              {/* <div>
                 <Link href="/cart">
                   <span>
                     <CartSvg />
@@ -30,7 +30,7 @@ export const Header = () => {
                   </span>
                   <p>Cart</p>
                 </Link>
-              </div>
+              </div> */}
               <BarsSvg action={() => setMobile(!mobile)} />
             </div>
           </div>
@@ -44,7 +44,7 @@ export const Header = () => {
             })}
           </div>
           <div className={styles.action}>
-            <div>
+            {/* <div>
               <Link href="/cart">
                 <span>
                   <CartSvg />
@@ -52,7 +52,7 @@ export const Header = () => {
                 </span>
                 <p>Cart</p>
               </Link>
-            </div>
+            </div> */}
             <Link href="/contact">Contact us</Link>
           </div>
         </div>

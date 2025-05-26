@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { formatter } from "@/utils/helper";
+// import { formatter } from "@/utils/helper";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { useRouter } from "next/navigation";
-import { useDispatch } from "react-redux";
-import { addtoCart } from "@/redux/slice/cart";
-import { toast } from "react-toastify";
+// import { useDispatch } from "react-redux";
+// import { addtoCart } from "@/redux/slice/cart";
+// import { toast } from "react-toastify";
 
 export type ProductProps = {
   src: string;
@@ -17,22 +17,22 @@ export type ProductProps = {
   id: string;
 };
 
-export const SingleProduct: FC<ProductProps> = ({ src, text, title, price, type, id }) => {
+export const SingleProduct: FC<ProductProps> = ({ src, text, title, type, id }) => {
   const router = useRouter();
-  const dispatch = useDispatch();
-  const addToCart = () => {
-    const payload = {
-      src,
-      title,
-      text,
-      price,
-      type,
-      id,
-      count: 1,
-    };
-    dispatch(addtoCart(payload));
-    toast.success("Added to Cart Successfully!!");
-  };
+  // const dispatch = useDispatch();
+  // const addToCart = () => {
+  //   const payload = {
+  //     src,
+  //     title,
+  //     text,
+  //     price,
+  //     type,
+  //     id,
+  //     count: 1,
+  //   };
+  //   dispatch(addtoCart(payload));
+  //   toast.success("Added to Cart Successfully!!");
+  // };
   return (
     <div className={styles.container}>
       <div className={styles.image} onClick={() => router.push(`${type}/${id}`)}>
@@ -45,15 +45,15 @@ export const SingleProduct: FC<ProductProps> = ({ src, text, title, price, type,
         </div>
         <div className={styles.bottom}>
           <div className={styles.left}>
-            <button onClick={addToCart}>Add to Cart</button>
-            <h3>{formatter(price)}</h3>
+            {/* <button onClick={addToCart}>Add to Cart</button>
+            <h3>{formatter(price)}</h3> */}
           </div>
           <div className={styles.white}>
             <div className={styles.black}>
               <div
                 onClick={() => {
-                  addToCart();
-                  router.push("/cart");
+                  // addToCart();
+                  router.push("/contact");
                 }}>
                 {/* <span> */}
                 <h2>Buy Now</h2>

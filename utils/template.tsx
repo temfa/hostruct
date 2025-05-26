@@ -1,23 +1,34 @@
 import * as React from "react";
-import { formatter } from "./helper";
-import { CartType } from "./data";
+// import { formatter } from "./helper";
+// import { CartType } from "./data";
 
 interface EmailTemplateProps {
   name: string;
-  address: string;
+  // address: string;
   phoneNumber: string;
-  total: number;
-  cartItems: CartType[];
+  // total: number;
+  // cartItems: CartType[];
   message: string;
+  email: string;
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, phoneNumber, address, total, cartItems, message }) => (
+export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, phoneNumber, email, message }) => (
   <div>
     <p>Dear Hostruct,</p>
     <p>
-      <strong>{name}</strong> just made a new order with shipping to:
+      {message}
+      {/* <strong>{name}</strong> with phone number {phoneNumber} and email {email} sent this message concerning just made a new order with shipping to: */}
     </p>
     <p>
+      <strong>Name</strong>: {name}
+    </p>
+    <p>
+      <strong>Phone Number</strong>: {phoneNumber}
+    </p>
+    <p>
+      <strong>Email</strong>: {email}
+    </p>
+    {/* <p>
       <strong>{address}</strong>
     </p>
     <p>
@@ -43,6 +54,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, ph
     <p>
       The user also has this message: <strong>{message}</strong>
     </p>
-    <p>Thank you for your order!</p>
+    <p>Thank you for your order!</p> */}
   </div>
 );

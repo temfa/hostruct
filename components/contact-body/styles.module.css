@@ -71,6 +71,11 @@
     text-align: right;
 }
 
+.single div {
+    display: flex;
+    gap: 5px;
+}
+
 .right {
     padding: 44px 31px;
     flex: 1;

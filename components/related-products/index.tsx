@@ -5,12 +5,12 @@ import { Layout } from "@/layout";
 import { ProductProps } from "../single-product";
 import { productData } from "@/utils/data";
 import Image from "next/image";
-import { formatter } from "@/utils/helper";
+// import { formatter } from "@/utils/helper";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { usePathname, useRouter } from "next/navigation";
-import { useDispatch } from "react-redux";
-import { addtoCart } from "@/redux/slice/cart";
-import { toast } from "react-toastify";
+// import { useDispatch } from "react-redux";
+// import { addtoCart } from "@/redux/slice/cart";
+// import { toast } from "react-toastify";
 
 export const RelatedProducts = ({ page, id }: { page: string; id: string }) => {
   const [data, setData] = useState<ProductProps[]>([]);
@@ -18,22 +18,23 @@ export const RelatedProducts = ({ page, id }: { page: string; id: string }) => {
     setData(page === "Cakes & Pastries" ? productData?.cake : page === "Wigs & Braids" ? productData?.wig : productData?.access);
   }, [page]);
   const pathname = usePathname();
+  const newPathname = pathname.split("/");
   const router = useRouter();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const addToCart = (item: ProductProps) => {
-    const payload = {
-      src: item.src,
-      title: item.title,
-      text: item.text,
-      price: item.price,
-      type: item.type,
-      id: item.id,
-      count: 1,
-    };
-    dispatch(addtoCart(payload));
-    toast.success("Added to Cart Successfully!!");
-  };
+  // const addToCart = (item: ProductProps) => {
+  //   const payload = {
+  //     src: item.src,
+  //     title: item.title,
+  //     text: item.text,
+  //     price: item.price,
+  //     type: item.type,
+  //     id: item.id,
+  //     count: 1,
+  //   };
+  //   dispatch(addtoCart(payload));
+  //   toast.success("Added to Cart Successfully!!");
+  // };
 
   return (
     <Layout>
@@ -46,25 +47,25 @@ export const RelatedProducts = ({ page, id }: { page: string; id: string }) => {
             .map((item, index) => {
               return (
                 <div className={styles.productContainer} key={index}>
-                  <div className={styles.image} onClick={() => router.push(`${pathname}/${item.title}`)}>
+                  <div className={styles.image} onClick={() => router.push(`/${newPathname[1]}/${item.id}`)}>
                     <Image width={243} height={275} alt="Product" src={item.src} />
                   </div>
                   <div className={styles.productBody}>
-                    <div className={styles.productTop} onClick={() => router.push(`${pathname}/${item.title}`)}>
+                    <div className={styles.productTop} onClick={() => router.push(`/${newPathname[1]}/${item.id}`)}>
                       <h3>{item.title}</h3>
                       <p>{item.text}</p>
                     </div>
                     <div className={styles.productBottom}>
                       <div className={styles.productLeft}>
-                        <button onClick={() => addToCart(item)}>Add to Cart</button>
-                        <h3>{formatter(item.price)}</h3>
+                        {/* <button onClick={() => addToCart(item)}>Add to Cart</button>
+                        <h3>{formatter(item.price)}</h3> */}
                       </div>
                       <div className={styles.white}>
                         <div className={styles.black}>
                           <div
                             onClick={() => {
-                              addToCart(item);
-                              router.push("/cart");
+                              // addToCart(item);
+                              router.push("/contact");
                             }}>
                             <span>
                               <h2>Buy Now</h2>

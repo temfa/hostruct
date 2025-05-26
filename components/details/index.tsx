@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import { Layout } from "@/layout";
 import Image from "next/image";
 import { CaretRightSvg } from "@/svgs/caret-right";
-import { formatter } from "@/utils/helper";
+// import { formatter } from "@/utils/helper";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { productData } from "@/utils/data";
 import { ProductProps } from "../single-product";
@@ -57,7 +57,7 @@ const Details: FC<Props> = ({ id, type }) => {
             <div className={styles.top}>
               <div>
                 <h2>{data?.title}</h2>
-                <p>{formatter(data.price)}</p>
+                {/* <p>{formatter(data.price)}</p> */}
               </div>
               <p>{data?.text}</p>
             </div>
@@ -107,7 +107,7 @@ const Details: FC<Props> = ({ id, type }) => {
                 </div>
               </div>
               <div className={styles.count}>
-                <div className={styles.details}>
+                {/* <div className={styles.details}>
                   <div className={styles.single}>
                     <p>Product total</p>
                     <h2>{formatter(data.price)}</h2>
@@ -120,7 +120,7 @@ const Details: FC<Props> = ({ id, type }) => {
                     <p>Grand total</p>
                     <h2>{formatter(data.price * count)}</h2>
                   </div>
-                </div>
+                </div> */}
                 <button onClick={request}>
                   Request Now <SideArrowSmallSvg color="white" />
                 </button>

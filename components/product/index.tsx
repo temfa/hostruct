@@ -5,14 +5,14 @@ import { Layout } from "../../layout";
 import { CaretRightSvg } from "@/svgs/caret-right";
 import { ProductProps } from "../single-product";
 import Image from "next/image";
-import { formatter } from "@/utils/helper";
+// import { formatter } from "@/utils/helper";
 import { SideArrowSmallSvg } from "@/svgs/side-arrow-small";
 import { usePathname, useRouter } from "next/navigation";
 import { ArrowCircleLeft } from "@/svgs/arrow-circle-left";
 import { ArrowCircleRight } from "@/svgs/arrow-circle-right";
-import { useDispatch } from "react-redux";
-import { addtoCart } from "@/redux/slice/cart";
-import { toast } from "react-toastify";
+// import { useDispatch } from "react-redux";
+// import { addtoCart } from "@/redux/slice/cart";
+// import { toast } from "react-toastify";
 
 type Props = {
   page: string;
@@ -22,7 +22,7 @@ type Props = {
 
 export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
   const pathname = usePathname();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const router = useRouter();
   const targetRef = useRef<HTMLDivElement | null>(null);
   const itemsPerPage = 12;
@@ -38,19 +38,19 @@ export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
     }
   };
 
-  const addToCart = (item: ProductProps) => {
-    const payload = {
-      src: item.src,
-      title: item.title,
-      text: item.text,
-      price: item.price,
-      type: item.type,
-      id: item.id,
-      count: 1,
-    };
-    dispatch(addtoCart(payload));
-    toast.success("Added to Cart Successfully!!");
-  };
+  // const addToCart = (item: ProductProps) => {
+  //   const payload = {
+  //     src: item.src,
+  //     title: item.title,
+  //     text: item.text,
+  //     price: item.price,
+  //     type: item.type,
+  //     id: item.id,
+  //     count: 1,
+  //   };
+  //   dispatch(addtoCart(payload));
+  //   toast.success("Added to Cart Successfully!!");
+  // };
 
   return (
     <Layout>
@@ -106,15 +106,15 @@ export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
                       </div>
                       <div className={styles.productBottom}>
                         <div className={styles.productLeft}>
-                          <button onClick={() => addToCart(item)}>Add to Cart</button>
-                          <h3>{formatter(item.price)}</h3>
+                          {/* <button onClick={() => addToCart(item)}>Add to Cart</button>
+                          <h3>{formatter(item.price)}</h3> */}
                         </div>
                         <div className={styles.white}>
                           <div className={styles.black}>
                             <div
                               onClick={() => {
-                                addToCart(item);
-                                router.push("/cart");
+                                // addToCart(item);
+                                router.push("/contact");
                               }}>
                               <h2>Buy Now</h2>
                               <span>
