@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.left}>
-            <Image src="/images/white-logo.png" width={175.08} height={25} alt="Logo" />
+            <Image src="/images/hostruct.png" width={97} height={54} alt="Logo" />
             <p>From cakes to wigs and accessories—each piece is made with flair, quality, and love.</p>
           </div>
           <div className={styles.right}>
