@@ -20,6 +20,7 @@ export const ContactBody = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>();
 
@@ -42,6 +43,7 @@ export const ContactBody = () => {
 
       await fetch(`/api/send-mail`, options);
       toast.success("Message sent Successfully!!!");
+      reset();
     } catch (error) {
       console.error("Payment failed:", error);
       toast.error("Something went wrong. Please try again.");
