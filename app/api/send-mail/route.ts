@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const payload = await request.json();
   try {
     const { data, error } = await resend.emails.send({
-      from: "Hostruct Cake and Pastries <onboarding@resend.dev>",
+      from: "Hostruct Cake and Pastries <support@resend.dev>",
       to: ["bukolasalu88@gmail.com"],
       replyTo: payload.email,
       subject: "New Message",
