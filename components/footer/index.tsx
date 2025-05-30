@@ -38,13 +38,13 @@ export const Footer = () => {
           <div className={styles.black}>
             <div className={styles.white}>
               <div className={styles.socials}>
-                <Link href="#">
+                <Link href="https://www.tiktok.com/@hostruct?_t=ZN-8ueZ3YerMj0&_r=1" target="_blank">
                   <TikTokSvg />
                 </Link>
-                <Link href="#">
+                <Link href="https://www.facebook.com/share/16EX3tByLn/?mibextid=wwXIfr" target="_blank">
                   <FacebookSvg />
                 </Link>
-                <Link href="#">
+                <Link href="https://www.instagram.com/hostruct_associate?igsh=MWFta2h1OWV2N3Zycg%3D%3D&utm_source=qr" target="_blank">
                   <InstagramSvg />
                 </Link>
                 <Link href="#">

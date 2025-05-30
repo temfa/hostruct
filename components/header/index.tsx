@@ -20,7 +20,7 @@ export const Header = () => {
       <Layout>
         <div className={mobile ? `${styles.wrapper} ${styles.mobile}` : styles.wrapper}>
           <div className={styles.logo}>
-            <Image src="/images/hostruct.png" width={131} height={60.77} alt="Logo" />
+            <Image src="/images/logo_hostruct.png" width={131} height={60.77} alt="Logo" />
             <div className={styles.side}>
               {/* <div>
                 <Link href="/cart">

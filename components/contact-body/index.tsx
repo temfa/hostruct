@@ -8,6 +8,7 @@ import InstagramOrangeSvg from "@/svgs/instagramOrange";
 import TiktokOrangeSvg from "@/svgs/tiktokOrange";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 type FormData = {
   fullName: string;
@@ -71,9 +72,15 @@ export const ContactBody = () => {
               <div className={styles.single}>
                 <h3>Social Media handles</h3>
                 <div>
-                  <FacebookOrangeSvg />
-                  <InstagramOrangeSvg />
-                  <TiktokOrangeSvg />
+                  <Link href="https://www.facebook.com/share/16EX3tByLn/?mibextid=wwXIfr" target="_blank">
+                    <FacebookOrangeSvg />
+                  </Link>
+                  <Link href="https://www.instagram.com/hostruct_associate?igsh=MWFta2h1OWV2N3Zycg%3D%3D&utm_source=qr" target="_blank">
+                    <InstagramOrangeSvg />
+                  </Link>
+                  <Link href="https://www.tiktok.com/@hostruct?_t=ZN-8ueZ3YerMj0&_r=1" target="_blank">
+                    <TiktokOrangeSvg />
+                  </Link>
                 </div>
               </div>
             </div>

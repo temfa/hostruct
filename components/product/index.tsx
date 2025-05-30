@@ -64,13 +64,13 @@ export const ProductPage: FC<Props> = ({ page, filterData, products }) => {
           <div className={styles.left}>
             <h2>Filter</h2>
             <div className={styles.filter}>
-              <div className={styles.price}>
+              {/* <div className={styles.price}>
                 <h2>Price</h2>
                 <div>
                   <input type="text" placeholder="Enter Min" />
                   <input type="text" placeholder="Enter Max" />
                 </div>
-              </div>
+              </div> */}
               <div className={styles.type}>
                 <h2>{page}</h2>
                 <div className={styles.typeBody}>
