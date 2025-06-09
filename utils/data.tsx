@@ -305,7 +305,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig7.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -329,7 +329,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig10.png",
-      title: "Full frontal Braided wig",
+      title: "Braids",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -393,7 +393,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig18.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -409,7 +409,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig20.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
