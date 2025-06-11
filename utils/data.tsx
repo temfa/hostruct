@@ -6,6 +6,10 @@ export const navbarLinks = [
     link: "/",
   },
   {
+    text: "About us",
+    link: "/about",
+  },
+  {
     text: "Cakes & Pastries",
     link: "/cakes",
   },
@@ -257,7 +261,7 @@ export const productData: Props = {
   wig: [
     {
       src: "/images/wig1.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -337,7 +341,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig11.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -359,14 +363,14 @@ export const productData: Props = {
       type: "wigs",
       id: "wig13",
     },
-    {
-      src: "/images/wig14.png",
-      title: "14' Blend pixie with human hair frontal.",
-      text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
-      price: 50,
-      type: "wigs",
-      id: "wig14",
-    },
+    // {
+    //   src: "/images/wig14.png",
+    //   title: "14' Blend pixie with human hair frontal.",
+    //   text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
+    //   price: 50,
+    //   type: "wigs",
+    //   id: "wig14",
+    // },
     {
       src: "/images/wig15.png",
       title: "Full frontal Braided wig",
@@ -377,7 +381,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig16.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -433,7 +437,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig23.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -481,7 +485,7 @@ export const productData: Props = {
     },
     {
       src: "/images/wig29.png",
-      title: "Full frontal Braided wig",
+      title: "Braided wig",
       text: "Wig is made of high-quality, heat-resistant synthetic fiber ",
       price: 60,
       type: "wigs",
@@ -539,7 +543,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access2.png",
-      title: "Fascinators",
+      title: "Hair Piece",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -571,7 +575,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access6.png",
-      title: "Fascinator",
+      title: "Fascinator Hat",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -579,7 +583,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access7.png",
-      title: "Fascinators",
+      title: "Head Gear",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -587,7 +591,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access8.png",
-      title: "Fascinators",
+      title: "Head Gear",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -635,7 +639,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access14.png",
-      title: "Fascinators",
+      title: "Beaded Hair Accessories",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -651,7 +655,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access16.png",
-      title: "Fascinators",
+      title: "Fascinator Hat",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -667,7 +671,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access18.png",
-      title: "Fascinators",
+      title: "Ankara Fascinators Hat",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -675,7 +679,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access19.png",
-      title: "Fascinators",
+      title: "Head Gear",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -683,7 +687,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access20.png",
-      title: "Fascinators",
+      title: "Traditional Wedding Beads",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -691,7 +695,7 @@ export const productData: Props = {
     },
     {
       src: "/images/access21.png",
-      title: "Fascinators",
+      title: "Traditional Wedding Beads",
       text: "Quality accessories",
       price: 30,
       type: "accessories",
@@ -743,13 +747,11 @@ export const faqs = {
   cake: [
     {
       question: "How far in advance should I place my order?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "2 weeks ",
     },
     {
       question: "Do you deliver cakes?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, we deliver cakes",
     },
     {
       question: "Can I request a custom design not listed on the website?",
@@ -758,52 +760,43 @@ export const faqs = {
     },
     {
       question: "Are your cakes eggless or available in gluten-free options?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, they are available in gluten free options.",
     },
   ],
   wig: [
     {
       question: "Are your wigs 100% human hair?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, we have 100% human hair wigs and we also have those that are budget friendly.",
     },
     {
       question: "How do I care for and wash my wig?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "You can reach out and we can explain how to do that in detail.",
     },
     {
       question: "Do you offer custom wig coloring or styling?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, we offer custom wig coloring.",
     },
     {
       question: "Can I return a wig if it doesn't fit?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, as long as the seal is still intact",
     },
   ],
   access: [
     {
       question: "Can I request a custom design to match my outfit?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, you can.",
     },
     {
       question: "How long does it take to make a fascinator?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "2 weeks ",
     },
     {
       question: "Do you deliver accessories nationwide?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, we do",
     },
     {
       question: "Are your materials locally sourced?",
-      answer:
-        "Yes, we offer custom cakes for special occasions such as birthdays, weddings, and baby showers. Please let us know the details of your event and any specific requests you may have so that we can create the perfect cake for you.",
+      answer: "Yes, they are",
     },
   ],
 };

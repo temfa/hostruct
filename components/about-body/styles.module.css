@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding: 52px 0px 0px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 94px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.left img {
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+}
+
+.left div h2 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 28.01px;
+    line-height: 117%;
+    letter-spacing: 0%;
+}
+
+.left div p {
+    color: #000000;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 151%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.right h2 {
+    color: black;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -0.32px;
+}
+
+.right p {
+    color: #696969;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 169%;
+    letter-spacing: -0.32px;
+    text-align: justify;
+}
+
+.right div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bottom {
+    background-color: #F4F4F4;
+    padding: 87.5px 0px;
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    gap: 86px;
+    align-items: flex-end;
+}
+
+.line {
+    width: 0.5px;
+    height: 136px;
+    background-color: #BBBBBB;
+}
+
+.vision {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vision h2 {
+    color: black;
+    font-weight: 700;
+    font-size: 28.01px;
+    line-height: 117%;
+    letter-spacing: 0%;
+}
+
+.vision p {
+    color: #223333;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 151%;
+    letter-spacing: 0%;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        gap: 138px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 60px;
+        width: 100%;
+    }
+
+    .left,
+    .left img {
+        width: 100%;
+    }
+
+    .bottom {
+        padding: 54.5px 0px;
+    }
+
+    .body {
+        flex-direction: column;
+        gap: 87px;
+    }
+
+    .line {
+        display: none;
+    }
+}
