@@ -792,11 +792,11 @@ export const faqs = {
     },
     {
       question: "Do you deliver accessories nationwide?",
-      answer: "Yes, we do",
+      answer: "Yes, we do deliver accessories nationwide",
     },
     {
       question: "Are your materials locally sourced?",
-      answer: "Yes, they are",
+      answer: "Yes, our materials are locally sourced",
     },
   ],
 };
