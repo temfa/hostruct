@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    gap: 21px;
+    gap: 74px;
     padding: 52px 0px 0px;
 }
 
@@ -78,13 +78,13 @@
 .body {
     display: flex;
     justify-content: space-between;
-    gap: 86px;
-    align-items: flex-end;
+    gap: 45;
+    align-items: center;
 }
 
 .line {
     width: 0.5px;
-    height: 136px;
+    height: 213px;
     background-color: #BBBBBB;
 }
 
@@ -92,6 +92,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 580px;
 }
 
 .vision h2 {

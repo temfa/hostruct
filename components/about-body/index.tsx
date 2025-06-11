@@ -11,7 +11,7 @@ const AboutBody = () => {
           <div className={styles.left}>
             <Image src="/images/hostruct.jpeg" width={500} height={500} alt="Hotruct woman" />
             <div>
-              <h2>Olubukola Kabiru.</h2>
+              <h2>Mrs Olubukola Kabiru.</h2>
               <p>CEO/FOUNDER</p>
             </div>
           </div>
@@ -19,21 +19,23 @@ const AboutBody = () => {
             <h2>Story behind Hostruct</h2>
             <div>
               <p>
-                Hostruct was born from the creative spark and entrepreneurial spirit of its founder, Olubukola Kabiru, whose passion for baking, beauty, and self-expression began
-                during her university days at the University of Lagos. What started as a simple love for baking—guided by recipe books and baking for friends—quickly grew into
-                something more. Alongside making cakes, she began styling hair and curating fashion accessories, discovering joy in helping people feel confident, celebrated, and
-                cared for. Driven by a deep desire to combine creativity with excellence, she transformed her hobbies into a multi-faceted business that now serves customers with:
+                At Hostruct, we believe that beauty, celebration, and creativity should be part of everyday life. What started with a passion for baking has grown into a
+                multi-faceted brand offering a unique blend of sweet delights, stylish hair solutions, and handcrafted fashion accessories. Our journey began with a desire to craft
+                cakes and pastries that not only look stunning but taste unforgettable. Over time, that same passion for excellence and creativity extended to other expressions of
+                beauty—premium wigs, braids, hair products, and handmade beads, fascinators, hats, and accessories. Today, we are proud to serve clients looking for personalized
+                elegance, whether on their plate, their head, or as part of their style.
               </p>
-              <div>
-                <p>Delicious cakes crafted with premium ingredients and artistic flair.</p>
-                <p>Elegant accessories that elevate everyday and special occasions.</p>
-                <p>Professional hair styling that blends beauty with confidence</p>
-              </div>
               <p>
-                From baking free birthday cakes to friends, to selling her first handmade accessory, to styling bridal hair on weekends, Olubukola Kabiru built Hostruct one
-                relationship and one satisfied client at a time. Today, Hostruct stands as a symbol of passion, precision, and purpose—serving as a hub for celebrations, style, and
-                self-care. The journey from humble beginnings to a growing brand continues to inspire others, especially young women looking to turn their creativity into a calling
+                From birthday/wedding cakes to bridal hairpieces, from wedding treats to fashionable wigs, every product from Hostruct is a result of thoughtful design, skilled
+                craftsmanship, and genuine care. We focus on quality, detail, and the ability to customize each order to match your personality or special event. At Hostruct, we
+                don’t just sell products—we create experiences, build confidence, and celebrate individuality. Whether you’re marking a milestone, upgrading your look, or
+                accessorizing for a special event, we’re here to help you make a statement.
               </p>
+            </div>
+            <div>
+              <p>We bake joy.</p>
+              <p>We style beauty.</p>
+              <p> We craft elegance.</p>
             </div>
           </div>
         </div>
@@ -45,18 +47,21 @@ const AboutBody = () => {
               <Image src="/images/vision.png" width={61} height={61} alt="Vision" />
               <h2>Vision statement</h2>
               <p>
-                To become a trusted lifestyle brand known for creativity, excellence, and heartfelt service across baking, beauty, and fashion—empowering individuals to celebrate,
-                express, and elevate themselves with confidence and joy.
+                To be a trusted and inspiring lifestyle brand known for delivering exceptional cakes, premium hair products, and handcrafted accessories—transforming ordinary
+                moments into extraordinary expressions of taste, beauty, and style.
               </p>
             </div>
             <div className={styles.line} />
             <div className={styles.vision}>
               <Image src="/images/mission.png" width={61} height={61} alt="Vision" />
               <h2>Mission statement</h2>
-              <p>
-                To celebrate life’s moments by delivering high-quality cakes, stylish accessories, and exceptional hair services that inspire confidence, joy, and beauty in every
-                customer—while creating memorable experiences that reflect care, creativity, and authenticity.
-              </p>
+              <div>
+                <p>• To create high-quality baked goods that delight the senses and elevate celebrations.</p>
+                <p>• To provide stylish, affordable, and versatile hair solutions that empower confidence and expression.</p>
+                <p>• To design distinctive handmade accessories that reflect individuality and enhance elegance.</p>
+                <p>• To maintain a standard of excellence, creativity, and care in every product we deliver.</p>
+                <p>• To build lasting relationships with our customers through consistency, integrity, and personalized service.</p>
+              </div>
             </div>
           </div>
         </Layout>
