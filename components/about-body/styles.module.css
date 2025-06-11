@@ -139,4 +139,8 @@
     .line {
         display: none;
     }
+
+    .vision {
+        width: 100%;
+    }
 }
