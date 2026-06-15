@@ -7,7 +7,7 @@ import React from "react";
 const Accessories = () => {
   return (
     <>
-      <ProductBanner src="/images/access-page-banner.png" mobile="/images/access-page-mobile.png" />
+      <ProductBanner src="/images/jewel.jpeg" />
       <ProductPage page="Accessories" filterData={["Fascinators", "Custom hats", "Beaded earrings", "Necklaces", "Bridal hair"]} products={productData.access} />
       <ProductContact />
     </>
